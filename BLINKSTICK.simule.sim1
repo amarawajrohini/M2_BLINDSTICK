@@ -1,0 +1,33 @@
+<circuit type="simulide_1.0" rev="1007" stepSize="1000000" stepsPS="1000000" NLsteps="100000" animate="0" >
+
+<item itemtype="DcMotor" CircId="DcMotor-40" mainComp="false" Show_id="true" Show_Val="false" Pos="-656,-176" rotation="0" hflip="1" vflip="1" label="DcMotor-40" idLabPos="-22,-48" labelrot="0" valLabPos="0,0" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+
+<item itemtype="Voltage Source" CircId="Voltage Source-15" mainComp="false" ShowProp="MaxValue" Show_id="false" Show_Val="true" Pos="-312,-396" rotation="0" hflip="1" vflip="1" label="Voltage Source-15" idLabPos="-40,-80" labelrot="0" valLabPos="-43.9949,-5.99544" valLabRot="0" Value_Volt="5 V" MaxValue="5 V" />
+
+<item itemtype="AudioOut" CircId="AudioOut-7" mainComp="false" Show_id="false" Show_Val="false" Pos="-52,-140" rotation="0" hflip="1" vflip="1" label="AudioOut-7" idLabPos="-20,-36" labelrot="0" valLabPos="0,0" valLabRot="0" Buzzer="false" Impedance="8 Ω" />
+
+<item itemtype="SR04" CircId="SR04-6" mainComp="false" Show_id="false" Show_Val="false" Pos="-136,-352" rotation="0" hflip="1" vflip="1" label="SR04-6" idLabPos="-16,-48" labelrot="0" valLabPos="0,0" valLabRot="0" />
+
+<item itemtype="Ground" CircId="Ground-3" mainComp="false" Show_id="false" Show_Val="false" Pos="-244,-136" rotation="0" hflip="1" vflip="1" label="Ground-3" idLabPos="-16,8" labelrot="0" valLabPos="0,0" valLabRot="0" />
+
+<item itemtype="MCU" CircId="mega328-45" mainComp="false" Show_id="true" Show_Val="false" Pos="-540,-324" rotation="0" hflip="1" vflip="1" label="mega328-45" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="walkman.ino (1).hex" Auto_Load="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" />
+
+<item itemtype="Node" CircId="Node-60" mainComp="false" Pos="-244,-160" />
+
+<item itemtype="Connector" uid="Connector-16" startpinid="Voltage Source-15-outPin" endpinid="SR04-6-inpin" pointList="-284,-380,-296,-396,-224,-396,-224,-376" />
+
+<item itemtype="Connector" uid="Connector-47" startpinid="SR04-6-trigpin" endpinid="mega328-45-PORTD3" pointList="-136,-304,-136,-188,-596,-188,-596,-284,-548,-284" />
+
+<item itemtype="Connector" uid="Connector-48" startpinid="SR04-6-outpin" endpinid="mega328-45-PORTD2" pointList="-128,-304,-128,-176,-568,-176,-568,-292,-548,-292" />
+
+<item itemtype="Connector" uid="Connector-56" startpinid="DcMotor-40-rPin" endpinid="Node-60-0" pointList="-616,-176,-596,-176,-596,-160,-244,-160" />
+
+<item itemtype="Connector" uid="Connector-57" startpinid="DcMotor-40-lPin" endpinid="mega328-45-PORTD6" pointList="-696,-176,-696,-228,-548,-228" />
+
+<item itemtype="Connector" uid="Connector-58" startpinid="AudioOut-7-lPin" endpinid="mega328-45-PORTD5" pointList="-68,-148,-72,-148,-72,-188,-12,-188,-12,-112,-724,-112,-724,-236,-548,-236" />
+
+<item itemtype="Connector" uid="Connector-59" startpinid="AudioOut-7-rPin" endpinid="Node-60-1" pointList="-68,-140,-192,-140,-192,-160,-244,-160" />
+
+<item itemtype="Connector" uid="Connector-61" startpinid="Node-60-2" endpinid="Ground-3-Gnd" pointList="-244,-160,-244,-152" />
+
+</circuit>
